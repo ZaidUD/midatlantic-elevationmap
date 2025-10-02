@@ -1,0 +1,83 @@
+/* #map-container {
+    width: 100%;
+    overflow: hidden;
+} */
+
+#panel, #main-map,
+.main-map-div, .panels,
+#map-container, #main-container {
+    height: 420px;
+}
+
+.main-map-div, .panels{
+    overflow: hidden;
+}
+#main-map {
+    width: 100%;
+}
+
+#main-container {
+    display: flex;
+    height: calc(100vh - 50px - 300px); /* Subtract navbar and lower maps height */
+}
+
+#panel {
+    width: 300px;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.main-map-div, .panels{
+    overflow: hidden;
+}
+
+.subtitle{
+    font-variant: small-caps;
+    font-size: 2.4rem;
+}
+
+.authors{
+    font-size: 1.3rem;
+}
+
+.landing-page-btn, .landing-page-btn:hover{
+    width: 140px;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: #2d5079cb;
+    border-color: #18613ebd;
+    border-radius: 4px;
+}
+
+.landing-page-btn a{
+    color: white;
+    text-decoration: none;
+}
+
+.landing-page-btn:hover, .landing-page-btn:active{
+    /* background-color: #13472ec7 !important;
+    border-color: #18613ebd !important; */
+    background-color: #385e8ac0 !important;
+    border-color: #18613ebd !important;
+}
+
+
+/* #state-list{
+    padding-left: 0;
+} */
+
+#state-list li { 
+    font-size: 16px; 
+    margin: 5px 0; 
+    padding: 5px 10px; 
+    color: black; 
+    border-radius: 4px; 
+    display: inline-block;
+    border-width: 1px;
+    border-style: solid;
+}
+
+#state-list li.virginia { background-color: #ff444465; border-color: #ff4444;}
+#state-list li.delaware { background-color: #3388ff65; border-color: #3388ff; }
+#state-list li.maryland { background-color: #44ff4465; border-color: #44ff44; }
+#state-list li.new-jersey { background-color: #ffaa0065; border-color: #ffaa00; }

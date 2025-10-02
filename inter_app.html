@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIML - Height Map</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="css/le_styles.css" />
+</head>
+<body>
+    <!-- <div id="navbar">CIML - Height Map</div> -->
+    <div class="project-info">
+        <div class="container py-5">
+            <h1 class="text-center display-4 fw-bold">Transformative Dataset of the Chesapeake</h1>
+            <h3 class="text-center display-4 subtitle">CHM, DTM, RGB, Multispectral at 1-meter resolution</h3>
+            <p class="mt-4 text-justify">
+             A co-registered 1-meter resolution dataset of multispectral band imagery, canopy height models (CHM), RGB, and digital terrain models (DTM) across the Mid-Atlantic would represent a transformative resource for both science and applied management. At this resolution, features such as individual trees, field edges, riparian buffers, tidal creeks, and parcel-scale land uses become visible, enabling analyses at the scale where ecological, hydrological, and human processes interact. The synergy between multispectral imagery and CHM enables robust monitoring of forest structure, biomass, and health, while the DTM provides the fine-scale elevation detail needed for accurate hydrologic modeling, stormwater routing, and floodplain mapping. For science, this means stronger habitat models, improved carbon accounting, and early detection of invasive species. For policy and practice, it means actionable insights for Chesapeake Bay restoration efforts, urban tree canopy equity, precision agriculture, and resilience planning against sea-level rise and flooding. Critically, region-wide 1-meter coverage ensures consistent, cross-jurisdictional baselines that fuel machine-learning models, enable time-series change detection, and support collaboration between states and agencies. The result is a high-fidelity, decision-ready dataset that bridges fundamental science and practical applications in climate resilience, biodiversity conservation, infrastructure planning, and risk management.
+            </p>
+        </div>
+    </div>
+
+    <div class="main-map-div">
+        <div class="container">
+            <div id="main-container">
+                <div id="map-container">
+                    <div id="main-map"></div>
+                </div>
+
+                <div id="panel">
+                    <h3>Define Bounding Box</h3>
+                    <div class="coordinate-group">
+                        <label for="tl-lat">Top-Left Latitude:</label>
+                        <input type="number" id="tl-lat" step="any" placeholder="e.g., 39.6940">
+                    </div>
+                    <div class="coordinate-group">
+                        <label for="tl-lon">Top-Left Longitude:</label>
+                        <input type="number" id="tl-lon" step="any" placeholder="e.g., -75.7800">
+                    </div>
+                    <div class="coordinate-group">
+                        <label for="br-lat">Bottom-Right Latitude:</label>
+                        <input type="number" id="br-lat" step="any" placeholder="e.g., 39.6600">
+                    </div>
+                    <div class="coordinate-group">
+                        <label for="br-lon">Bottom-Right Longitude:</label>
+                        <input type="number" id="br-lon" step="any" placeholder="e.g., -75.7200">
+                    </div>
+                    <button id="select-points-btn">Select Points on Map</button>
+                    <button id="apply-btn">Apply Bounds</button>
+                    <button id="download-btn">Download GeoTIFF</button>
+                    <div id="error-message"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-map-info">
+        <div class="container py-0">
+            <p class="mt-4 text-justify">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Sed euismod, nunc non blandit varius, risus nisl fermentum orci, 
+            vel varius nulla odio id purus. Morbi dapibus purus vel 
+            augue gravida, vitae luctus nunc laoreet.
+            </p>
+        </div>
+    </div>
+
+    <div class="panels">
+        <div class="container py-5">
+            <div id="lower-maps-container">
+                <div id="normal-map" class="me-2"></div>
+                <div id="chm-map" class="me-2"></div>
+                <div id="satellite-map" class="me-2"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script><script src="js/le_js.js"></script>
+</body>
+</html>
