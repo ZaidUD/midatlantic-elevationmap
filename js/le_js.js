@@ -40,7 +40,7 @@ const satelliteLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/
 }).addTo(satelliteMap);
 
 var osm = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors', minZoom: 7, maxZoom: 18});
-var lyr = L.tileLayer('https://www.eecis.udel.edu/~arce/mida-elevation/mida_elev_tiles/{z}/{x}/{y}.png', {tms: 1, opacity: 0.8, attribution: "", minZoom: 7, maxZoom: 18});
+var lyr = L.tileLayer('https://www.eecis.udel.edu/~arce/mida-elevation/mida_elev_tiles/{z}/{x}/{y}.png', {tms: 1, opacity: 1.0, attribution: "", minZoom: 7, maxZoom: 18});
 var lyr2 = L.tileLayer('https://www.eecis.udel.edu/~arce/mida-elevation/mida_elev_tiles/{z}/{x}/{y}.png', {tms: 1, opacity: 0.8, attribution: "", minZoom: 7, maxZoom: 18});
 
 var basemaps = {}
