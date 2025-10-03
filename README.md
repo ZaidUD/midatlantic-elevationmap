@@ -44,10 +44,11 @@ The dataset directory is organized by state for efficient access.
 
 The CHM and DEM are generated using a deep generative learning model designed for image translation pretrained on depth estimation. The model was trained to estimate vegetation height from 1m-resolution multispectral imagery, leveraging image-translation and depth estimation techniques to generate a realistic elevation model.
 
-During training, the model used the [High-resolution orthorectified camera imagery mosaic](https://data.neonscience.org/data-products/DP3.30010.001) (multispectral) and the [Ecosystem structure](https://data.neonscience.org/data-products/DP3.30015.001) (CHM) from the [NEON project](https://data.neonscience.org/) by NSF. NEON's multispectral imagery and CHMs are collected from an airborne platform.
-The model was tasked to use the multispectral bands as input and generate the corresponding CHM.
+The canopy height model (CHM) and digital elevation model (DEM) are generated using a deep generative learning model for image translation, pretrained on depth estimation. For training, the model used [High-resolution orthorectified camera imagery mosaic](https://data.neonscience.org/data-products/DP3.30010.001) (multispectral) and [Ecosystem structure](https://data.neonscience.org/data-products/DP3.30015.001) (CHM) from the NSF [NEON project](https://data.neonscience.org/). The NEON multispectral imagery, originally collected at 0.1-meter resolution, was resampled to 1 meter per pixel. The CHM was derived from airborne LiDAR point clouds with sub-meter accuracy, also aggregated to 1-meter resolution. The model was trained to take the multispectral bands as input and generate the corresponding CHM.
 
-During inference, the model used high-resolution (1m) Multispectral imagery from the National Agriculture Imagery Program (NAIP), collected during leaf-on conditions in 2023. NAIP imagery provides red, green, blue, and near infrared bands, capturing detailed vegetation patterns across the Mid-Atlantic.
+The performance of the model was evaluated on a testing set of images never seen by the model, achieving a mean absolute error of 2.74 meters and a root mean squared error of 4.53 meters.
+
+During inference, the model used high-resolution (1m) multispectral imagery from the National Agriculture Imagery Program (NAIP), collected during leaf-on conditions in 2023. NAIP imagery provides red, green, blue, and near infrared bands, capturing detailed vegetation patterns across the Mid-Atlantic.
 
 Limitations include reduced accuracy in urban areas with sparse vegetation or under cloud-covered RGB inputs or out-of-distribution camera settings for the multispectral imagery.
 
