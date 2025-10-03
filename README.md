@@ -49,12 +49,14 @@ This dataset is licensed under **Creative Commons CC BY 4.0**, allowing free use
 
 ### Methodology
 
-The CHM and DEM are generated using a deep learning model, a generative neural network designed for image translation. The model was trained to estimate vegetation height from 1m-resolution multispectral imagery, leveraging image-translation and depth estimation techniques to generate a realistic elevation model. 
-Limitations include reduced accuracy in urban areas with sparse vegetation or under cloud-covered RGB inputs.
+The CHM and DEM are generated using a deep generative learning model designed for image translation pretrained on depth estimation. The model was trained to estimate vegetation height from 1m-resolution multispectral imagery, leveraging image-translation and depth estimation techniques to generate a realistic elevation model.
 
-### Input
+During Training the model used the [High-resolution orthorectified camera imagery mosaic](https://data.neonscience.org/data-products/DP3.30010.001) (multispectral) and the [Ecosystem structure](https://data.neonscience.org/data-products/DP3.30015.001) (CHM) from the [NEON project](https://data.neonscience.org/) by NSF. NEON's multispectral imagery and CHMs are collected from an airborne platform.
+The model was tasked to use the multispectral bands as input and generate the corresponding CHM.
 
-The primary input is high-resolution (1m) Multispectral imagery from the National Agriculture Imagery Program (NAIP), collected during leaf-on conditions in 2023. NAIP imagery provides red, green, blue, and near infrared bands, capturing detailed vegetation patterns across the Mid-Atlantic. Airborne LiDAR data from the [NEON project](https://data.neonscience.org/data-products/DP3.30015.001) was used for training and validation, providing ground-truth canopy heights.
+During inference the model used high-resolution (1m) Multispectral imagery from the National Agriculture Imagery Program (NAIP), collected during leaf-on conditions in 2023. NAIP imagery provides red, green, blue, and near infrared bands, capturing detailed vegetation patterns across the Mid-Atlantic.
+
+Limitations include reduced accuracy in urban areas with sparse vegetation or under cloud-covered RGB inputs or out-of-distribution camera settings for the multispectral imagery.
 
 ### Output (Characteristics of Files and CHM)
 
