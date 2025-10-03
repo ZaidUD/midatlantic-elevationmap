@@ -125,3 +125,12 @@ body {
     background-color: #385e8ac0 !important;
     border-color: #18613ebd !important;
 }
+
+.height_ref_bar{
+    width: 100%;
+}
+
+.panels-subtitle{
+    font-weight: 600;
+    font-size: 1.4rem;
+}
