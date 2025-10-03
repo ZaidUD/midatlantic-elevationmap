@@ -40,8 +40,8 @@ const satelliteLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/
 }).addTo(satelliteMap);
 
 var osm = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors', minZoom: 7, maxZoom: 18});
-var lyr = L.tileLayer('http://128.4.12.153:8000/{z}/{x}/{y}.png', {tms: 1, opacity: 0.8, attribution: "", minZoom: 7, maxZoom: 18});
-var lyr2 = L.tileLayer('http://128.4.12.153:8000/{z}/{x}/{y}.png', {tms: 1, opacity: 0.8, attribution: "", minZoom: 7, maxZoom: 18});
+var lyr = L.tileLayer('https://www.eecis.udel.edu/~arce/mida-elevation/mida_elev_tiles/{z}/{x}/{y}.png', {tms: 1, opacity: 0.8, attribution: "", minZoom: 7, maxZoom: 18});
+var lyr2 = L.tileLayer('https://www.eecis.udel.edu/~arce/mida-elevation/mida_elev_tiles/{z}/{x}/{y}.png', {tms: 1, opacity: 0.8, attribution: "", minZoom: 7, maxZoom: 18});
 
 var basemaps = {}
 var overlaymaps = {"CHM": lyr}
@@ -158,7 +158,7 @@ async function applyBounds(north, south, west, east) {
 
     // Fetch GEDTM30 as PNG for overlay
     try {
-        const response = await fetch('http://128.4.12.153:8000/api/geotiff-png', {
+        const response = await fetch('https://www.eecis.udel.edu/~arce/mida-elevation/mida_elev_tiles/api/geotiff-png', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -332,7 +332,7 @@ document.getElementById('download-btn').addEventListener('click', async function
     const east = Math.max(tlLon, brLon);
 
     try {
-        const response = await fetch('http://128.4.12.153:8000/api/geotiff', {
+        const response = await fetch('https://www.eecis.udel.edu/~arce/mida-elevation/mida_elev_tiles/api/geotiff', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
