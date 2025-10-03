@@ -51,12 +51,11 @@ During inference, the model used high-resolution (1m) Multispectral imagery from
 
 Limitations include reduced accuracy in urban areas with sparse vegetation or under cloud-covered RGB inputs or out-of-distribution camera settings for the multispectral imagery.
 
-### Output (Characteristics of Files and CHM)
+### Output
 
 - **File Format**: GeoTIFF, georeferenced to EPSG:32618 (UTM Zone 18N).
-- **Structure**: Tiled rasters by state for manageable processing (e.g., `DE_CHM_1m.tif`, `MD_CHM_1m.tif`).
-- **CHM Characteristics**: Pixel values represent vegetation height in meters relative to ground elevation, ranging from 0 (ground or low vegetation) to [max height, e.g., 40m] for tall trees. Each tile includes metadata on spatial extent and projection.
-- **Quality**: High accuracy (e.g., R² = [Insert value, e.g., 0.9] against LiDAR), with minor errors in dense urban or cloudy areas.
+- **Structure**: Tiled rasters by state for manageable processing (e.g., `DE/pred_m_3807513_nw_18_030_20230712_20230919.tif`).
+- **CHM Characteristics**: Pixel values represent vegetation height in meters relative to ground elevation, ranging from 0 (ground or low vegetation) to 50 meters for tall trees. Each tile includes metadata on spatial extent and projection.
 
 ## License
 
