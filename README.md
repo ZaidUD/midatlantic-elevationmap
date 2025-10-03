@@ -45,10 +45,10 @@ The dataset directory is organized by state for efficient access.
 
 The CHM and DEM are generated using a deep generative learning model designed for image translation pretrained on depth estimation. The model was trained to estimate vegetation height from 1m-resolution multispectral imagery, leveraging image-translation and depth estimation techniques to generate a realistic elevation model.
 
-During Training the model used the [High-resolution orthorectified camera imagery mosaic](https://data.neonscience.org/data-products/DP3.30010.001) (multispectral) and the [Ecosystem structure](https://data.neonscience.org/data-products/DP3.30015.001) (CHM) from the [NEON project](https://data.neonscience.org/) by NSF. NEON's multispectral imagery and CHMs are collected from an airborne platform.
+During training, the model used the [High-resolution orthorectified camera imagery mosaic](https://data.neonscience.org/data-products/DP3.30010.001) (multispectral) and the [Ecosystem structure](https://data.neonscience.org/data-products/DP3.30015.001) (CHM) from the [NEON project](https://data.neonscience.org/) by NSF. NEON's multispectral imagery and CHMs are collected from an airborne platform.
 The model was tasked to use the multispectral bands as input and generate the corresponding CHM.
 
-During inference the model used high-resolution (1m) Multispectral imagery from the National Agriculture Imagery Program (NAIP), collected during leaf-on conditions in 2023. NAIP imagery provides red, green, blue, and near infrared bands, capturing detailed vegetation patterns across the Mid-Atlantic.
+During inference, the model used high-resolution (1m) Multispectral imagery from the National Agriculture Imagery Program (NAIP), collected during leaf-on conditions in 2023. NAIP imagery provides red, green, blue, and near infrared bands, capturing detailed vegetation patterns across the Mid-Atlantic.
 
 Limitations include reduced accuracy in urban areas with sparse vegetation or under cloud-covered RGB inputs or out-of-distribution camera settings for the multispectral imagery.
 
@@ -68,4 +68,5 @@ This dataset is licensed under **Creative Commons CC BY 4.0**, allowing free use
 ## Acknowledgements
 
  - NEON (National Ecological Observatory Network). Ecosystem structure (DP3.30015.001), RELEASE-2025. https://doi.org/10.48443/jqqd-1n30. Dataset accessed from https://data.neonscience.org/data-products/DP3.30015.001/RELEASE-2025 on October 3, 2025.
- - 
+ - NEON (National Ecological Observatory Network). High-resolution orthorectified camera imagery mosaic (DP3.30010.001), RELEASE-2025. https://doi.org/10.48443/gdgn-3r69. Dataset accessed from https://data.neonscience.org/data-products/DP3.30010.001/RELEASE-2025 on October 3, 2025.
+ - U.S. Geological Survey. National Agriculture Imagery Program (NAIP) Color-Infrared Imagery, RELEASE-2023. https://doi.org/10.5066/F7QN651G. Dataset accessed from https://earthexplorer.usgs.gov/ on October 3, 2025.
