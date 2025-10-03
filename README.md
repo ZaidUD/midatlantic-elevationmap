@@ -34,7 +34,7 @@ The [website](https://zaidud.github.io/midatlantic-elevationmap/) provides inter
 
 The dataset directory is organized by state for efficient access.
 
-- **Zenodo**: Available at [Insert Zenodo DOI or placeholder link, e.g., https://zenodo.org/record/XXXXXXX].
+- **Zenodo**: Available at [https://doi.org/10.5281/zenodo.17253085](https://doi.org/10.5281/zenodo.17253085) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17253085.svg)](https://doi.org/10.5281/zenodo.17253085)
 
 ### Tools
 
