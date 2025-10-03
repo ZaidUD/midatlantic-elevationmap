@@ -39,12 +39,6 @@ The dataset directory is organized by state for efficient access.
 
 - **Python Scripts**: Sample scripts for loading and analyzing the dataset are available at [Insert GitHub link or repository].
 
-## License
-
-This dataset is licensed under **Creative Commons CC BY 4.0**, allowing free use with attribution. Please cite as:  
-[Kevin R.]. (2025). Mid-Atlantic CHM and Digital Elevation Models Dataset. University of Delaware. [10.5281/zenodo.17253085](10.5281/zenodo.17253085
-).
-
 ## Generation Process
 
 ### Methodology
@@ -64,6 +58,13 @@ Limitations include reduced accuracy in urban areas with sparse vegetation or un
 - **Structure**: Tiled rasters by state for manageable processing (e.g., `DE_CHM_1m.tif`, `MD_CHM_1m.tif`).
 - **CHM Characteristics**: Pixel values represent vegetation height in meters relative to ground elevation, ranging from 0 (ground or low vegetation) to [max height, e.g., 40m] for tall trees. Each tile includes metadata on spatial extent and projection.
 - **Quality**: High accuracy (e.g., R² = [Insert value, e.g., 0.9] against LiDAR), with minor errors in dense urban or cloudy areas.
+
+## License
+
+This dataset is licensed under **Creative Commons CC BY 4.0**, allowing free use with attribution. Please cite as:  
+[Kevin R.]. (2025). Mid-Atlantic CHM and Digital Elevation Models Dataset. University of Delaware. [10.5281/zenodo.17253085](10.5281/zenodo.17253085
+).
+
 ## Acknowledgements
 
  - NEON (National Ecological Observatory Network). Ecosystem structure (DP3.30015.001), RELEASE-2025. https://doi.org/10.48443/jqqd-1n30. Dataset accessed from https://data.neonscience.org/data-products/DP3.30015.001/RELEASE-2025 on October 3, 2025.
